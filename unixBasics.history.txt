@@ -1,0 +1,472 @@
+    2  cd Documents
+    3  ls
+    4  ls
+    5  cd ..
+    6  ls
+    7  cd Documents
+    8  ls
+    9  cd ..
+   10  cd Desktop
+   11  ls
+   12  more Programming_For_Biologists_ebook
+   13  cd Programming_For_Biologists_ebook
+   14  ls
+   15  cd ..
+   16  cd ..
+   17  ls -aF
+   18  ls
+   19  ls -F
+   20  cd Public/ls
+   21  cd Public
+   22  ls
+   23  cd Drop\ Box
+   24  ls
+   26  cd ..
+   27  cd /bin
+   30  ls -lt
+   31  ls -lt |head
+   32  man sleep
+   33  date ; sleep 2 ; date
+   34  cd ~
+   37  curl -0 https://rawgithubuserscontent.com/prog4biol/pfb2019/master/files/duffdiff.txt
+   38  curl -0 https://rawgithubusercontent.comprog4biol/pfb2019/master/files/cuffdiff.txt
+   39  wget -0 https://githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   40  ls
+   41  curl -0 https://githubusercontent.com/prog4biol/pfb2022/master/files/cuffdiff.txt
+   42  curl -O https://githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   43  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   44  cd ~
+   45  l
+   46  ls
+   47  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   48  greg Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   49  ls
+   50  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   51  ls
+   52  cat blablabla.txt
+   53  cat blablabla.txt > errors.txt
+   54  ls
+   55  more errors.txt
+   56  less errors.txt
+   57  cat fav_chr_cuffdiff.txt blablabla.txt
+   58  cat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt
+   60  ls
+   61  cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
+   62  ls
+   63  more out.txt
+   64  more err.txt
+   65  mor errors.txt
+   66  ls
+   67  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt
+   68  cat all_out_err.txt
+   69  ls
+   70  owd
+   71  pwdp
+   72  pwd
+   73  cd ..
+   74  ls
+   75  ls -F
+   76  ls
+   77  cd
+   78  ls
+   79  mkdir problemsets
+   80  ls
+   81  pwd
+   82  wget https://rawgithubsecurecontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   83  curl -O https://rawgithubsecurecontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   84  curl -O https://raw.githubsecurecontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   85  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   86  wc -l sequences.nt.fa
+   87  wc -c sequences.nt.fa
+   88  head sequences.nt.fa
+   89  man tail
+   90  tail -n 3
+   91  tail -n3 sequences.nt.fa
+   92  man tail
+   93  tail -n 3 sequences.nt.fa
+   94  grep '>' sequences.nt.fa
+   95  man mv
+   96  mv sequences.nt.fa cancer_genes.fasta
+   97  ls
+   98  head cancer_genes.fasta
+   99  tail -n3 cancer_genes.fasta
+  100  ls
+  101  cp cuffdiff.txt problemsets
+  102  ls
+  103  cd problemsets
+  104  ls
+  105  cd .
+  106  cd ..
+  107  head cuffdiff.txt 
+  108  man sort
+  109  head -n 1 cuffdiff.txt
+  110  head -n10 cuffdiff.txt
+  111  man sort
+  112  sort cuffdiff.txt 'log2(fold_change)' -r > sorted.cuffdiff.out
+  113  ls
+  114  head sorted.cuffdiff.out
+  115  man sort
+  116  sort cuffdiff.txt
+  117  sort cuffdiff.txt -k 'log2(fold_change)' > sorted.cuffdiff.txt
+  118  sort cuffdiff.txt -k
+  119  sort -k -r cuffdiff.txt
+  120  sort -k cuffdiff.txt -r 'log2(fold_change)'
+  121  ls
+  122  column-t
+  123  sort cuffdiff.txt column-T
+  124  ls
+  125  headed sorted.cuffdiff.out
+  126  head sorted.cuffdiff.out
+  127  ls
+  128  head sorted.cuffdiff.txt
+  129  ls
+  130  head -1 cuffdiff.txt
+  131  head cuffdiff.txt
+  132  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+  133  head -n 1 cuffdiff.txt
+  134  head cuffdiff.txt 
+  135  head cuffdiff.txt | column -t
+  136  man sort
+  137  column -t cuffdiff.txt
+  138  sort -k cuffdiff.txt
+  139  sort n-11 cuffdiff.txt
+  140  man sort
+  141  sort -k [10
+  142  sort -k 10
+  143  sort -k 10 cuffdiff.txt
+  144  sort -k 10 -n cuffdiff.txt
+  145  sort -k -r 10 -n cuffdiff.txt > sorted.cuffdiff.out
+  146  sort -r 10 -n cuffdiff.txt > sorted.cuffdiff.out
+  147  cat cuffdiff.txt
+  148  man sort
+  149  sort -k 10 -rn cuffdiff.txt
+  150  sort -k 10 -rn cuffdiff.txt > sorted.cuffdiff.out
+  151  ls 
+  152  cat sorted.cuffdiff.txt
+  153  rm sorted.cuffdiff.txt
+  154  ls
+  155  head sorted.cuffdiff.out
+  156  head n- 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+  157  head -n 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+  158  ls
+  159  cat sorted.cuffdiff.out
+  160  ld
+  162  ls
+  163  column -t top100.sorted.cuffdiff.out
+  164  head -1 top100.sorted.cuffdiff.out
+  165  sort -k 10 -n top100.sorted.cuffdiff.out
+  166  awk -F '|' '{print $1}' top100.sorted.cuffdiff.out > differentially.expressed.genes.txt
+  167  ls
+  168  cat differentially.expressed.genes.txt
+  169  clear
+  170  ls
+  172  pwd
+  173  clear
+  174  ls
+  175  pwd
+  176  git clone https://github.com/kleistikow/PFB_problemsets.git
+  177  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/kleistikow/PFB_problemsets.git\ngit push -u origin main
+  178  git clone git@github.com:kleistikow/PFB_problemsets.git
+  179  ls
+  180  cd PFB_problemsets
+  181  LS
+  182  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:kleistikow/PFB_problemsets.git\ngit push -u origin main
+  183  clear
+  184  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:kleistikow/PFB_problemsets.git\ngit push -u origin main
+  185  cd ..
+  186  ls
+  187  mv all_out_err.txt PFB_problemsets
+  188  ls
+  189  mv all_out_err.txt PFB_problemsets
+  190  ls
+  191  mv differentially.expressed.genes.txt PFB_problemsets
+  192  mv err.txt PFB_problemsets
+  193  ls
+  194  mv cancer_genes.fasta PFB_problemsets
+  195  mv cuffdiff.txt PFB_problemsets
+  196  mv cancer_genes.fasta PFB_problemsets
+  197  ls
+  198  mv errors.txt PFB_problemsets
+  199  mv sorted.cuffdiff.out PFB_problemsets
+  200  mv top100.sorted.cuffdiff.out PFB_problemsets
+  201  ls
+  202  mv out.txt PFB_problemsets
+  203  mv fav_chr_cuffdiff.txt PFB_problemsets
+  204  ls
+  205  cd problemsets
+  206  ls
+  207  mv cuffdiff.txt ..
+  208  ls
+  209  cd ..
+  210  ls
+  211  mv cuffdiff.txt PFB_problemsets
+  212  ls
+  213  cd problemsets
+  214  ls
+  215  cd ..
+  216  rm problemsets
+  217  ssh-keygen -t ed25519 -C "kleistikow3310@gmail.com"
+  218  eval "$(ssh-agent -s)"
+  219  open ~/.ssh/config
+  220  touch ~/.ssh/config
+  221  vi ~/.ssh/config
+  222  cat ~/.ssh/id_ed25519.pub
+  223  git clone git@github.com:kleistikow/PFB_problemsets1.git
+  224  git clone git@github.com:kleistikow/PFB_problemsets.git
+  225  ls
+  226  mv PFB_problemsets PFB_problemsets_old
+  227  ls
+  228  cd PFB_problemsets_old
+  229  ls
+  230  cd ..
+  231  ls
+  232  git clone git@github.com:kleistikow/PFB_problemsets.git
+  233  git clone git@github.com:kleistikow/PFB_problemsets.git
+  234  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:kleistikow/PFB_problemsets.git\ngit push -u origin main
+  235  ls
+  236  vi ~/.ssh/config
+  237  cat ~/.ssh/id_ed25519.pub
+  238  ls
+  239  cd PFB_problemsets_old
+  240  mkdir PFB_problemsets_2022
+  241  cd PFB_problemsets_2022
+  242  git clone git@github.com:kleistikow/PFB_problemsets.git
+  243  ls
+  244  cd PFB_problemsets
+  245  ls
+  246  git remote add
+  247  vi git_exercises.txt
+  248  git add git_exercises.txt
+  249  git commit -m 'Please God let this work'
+  250  git push origin main
+  251  ls
+  252  more git_exercises.txt
+  253  git push
+  254  git clone https://github.com/prog4biol/pfb2022.git
+  255  git pull
+  256  \a
+  257  LS
+  258  LS
+  259  cd ..
+  260  cd
+  261  LS
+  262  ls
+  263  /a
+  264  ls
+  265  cd PFB_problemsets_old
+  266  ls
+  267  cd PFB_problemsets_2022
+  268  ls
+  269  cd PFB_problemsets
+  270  ls
+  271  cd pfb2022
+  272  ls
+  273  cat README..pdf
+  274  cat README.pdf
+  275  ls
+  276  cd scripts
+  277  ls
+  278  cd ..
+  279  ls
+  280  cd ..
+  281  cd ..
+  282  cd ..
+  283  cd ..
+  284  ls
+  285  mv PFB_problemsets_old PFB_problemsets
+  286  ls
+  287  cd PFB_problemsets
+  288  ls
+  289  cd PFB_problemsets_2022
+  290  ;s
+  291  ls
+  292  cd..
+  293  cd PFB_problemsets
+  294  ls
+  295  cd ..
+  296  cd ..
+  297  cd ..
+  298  ls
+  299  cd PFB_problemsets
+  300  ls
+  301  cd PFB_problemsets_2022
+  302  ls
+  303  cd PFB_problemsets
+  304  ;s
+  305  ls
+  306  cd pfb2022
+  307  cd ..
+  308  ls -a
+  309  cd ..
+  310  ls -a
+  311  cd -
+  312  ls
+  313  ls -a
+  314  cd pfb2022
+  315  ls -a
+  316  cd ..
+  317  ls
+  318  git status
+  319  mv pfb2022 ..
+  320  ls
+  321  mv git_exercises.txt ..
+  322  ls
+  323  cd ..
+  324  ls -A
+  325  cd PFB_problemsets
+  326  ls
+  327  cd ..
+  328  cd pfb2022
+  329  ls
+  330  git status
+  331  cd ..
+  332  ls
+  333  mv git_exercises.txt PFB_problemsets
+  334  ls
+  335  cd PFB_problemsets
+  336  ls
+  337  cat git_exercises.txt
+  338  ls
+  339  cd ..
+  340  cd ..
+  341  cd
+  342  clear
+  343  ls
+  344  cd PFB_problemsets/PFB_problemsets_2022/PFB_problemsets
+  345  ls
+  346  mv git_exercises.txt ..
+  347  ls
+  348  cd ..
+  349  ls
+  350  git status
+  351  cd PFB_problemsets
+  352  git status
+  353  ls
+  354  cd ..
+  355  ls
+  356  git status
+  357  cd ..
+  358  ls
+  359  git status
+  360  cd ..
+  361  ls
+  362  cd PFB_problemsets
+  363  ls
+  364  git status
+  365  ls
+  366  cd PFB_problemsets_2022
+  367  git status
+  368  cd PFB_problemsets
+  369  git status
+  370  cd ..
+  371  mv git_exercises.txt PFB_problemsets
+  372  ls
+  373  cd PFB_problemsets
+  374  ls
+  375  git status
+  376  mkdir Files
+  377  find / | grep cancer
+  378  ls
+  379  cd ..
+  380  ;s
+  381  ls
+  382  cd ..
+  383  cd ..
+  384  ;s
+  385  ls
+  386  cd PFB_problemsets
+  387  ls
+  388  mv cancer_genes.fasta PFB_problemsets_2022/PFB_problemsets/Files
+  389  ls
+  390  cd PFB_problemsets_2022
+  391  ls
+  392  cd PFB_problemsets
+  393  ;s
+  394  ;s
+  395  ls
+  396  cd Files
+  397  ;s
+  398  ls
+  399  cd ..
+  400  git add Files/cancer_genes.fasta
+  401  git commit -m 'adding cancer_genes.fasta'
+  402  git push
+  403  vi mysequences.txt
+  404  ls
+  405  cat mysequences.txt
+  406  vi mysequences.txt
+  407  vi mysequences.txt
+  408  git push mysequences.txt
+  409  push mysequences.txt
+  410  git status
+  411  git add mysequences.txt
+  412  ls
+  413  git status
+  414  mkdir fastas
+  415  ls
+  416  cd Files
+  417  ls
+  418  cp cancer_genes.fasta ~/PFB_Problemsets/fastas
+  419  ls
+  420  cd .
+  421  cd ..
+  422  ls
+  423  cd fastas
+  424  ls
+  425  cd ..
+  426  ls
+  427  cd Files
+  428  ls
+  429  cp cancer_genes.fasta ~/PFB_problemsets/PFB_problemsets_2022/PFB_problemsets/fastas
+  430  ls
+  431  cd ..
+  432  ls
+  433  cd fastas
+  434  ls
+  435  cd ..
+  436  ls
+  437  cd Files
+  438  ls
+  439  rm cancer_genes.fasta
+  440  ls
+  441  cd ..
+  442  ls
+  443  cd fasta
+  444  cd fastas
+  445  ls
+  446  cd ..
+  447  git status
+  448  git add fastas
+  449  ls
+  450  git status
+  451  commit -a
+  452  git commit -a
+  453  git status
+  454  cd fastas
+  455  git add cancer_genes.fasta
+  456  git status
+  457  ls
+  458  cd ..
+  459  touch oops.txt
+  460  ls
+  461  git add oops.txt
+  462  git status
+  463  git rm oops.txt
+  464  git commit -m 'removing oops'
+  465  git status
+  466  ls
+  467  rm oops.txt
+  468  ls
+  469  git status
+  470  touch never.txt
+  471  ls
+  472  git add never.txt
+  473  git reset never.txt
+  474  man rm
+  475  git status
+  476  git reset never.txt
+  477  d
+  478  git status
+  479  history -1
+  480  history -
+  481  history 1
