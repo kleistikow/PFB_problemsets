@@ -16,7 +16,7 @@ elif age < "60" :
 elif age < "90" :
    message = "year olds wish they were dead"
    print (age, message)
-elif age > "90" :
+else :
    message = "year olds are proabably dead"
    print (age, message)
 
