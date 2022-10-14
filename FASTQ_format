@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>FASTQ format - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7fceb841-4263-49c6-8a9d-b9ba402265cd","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"FASTQ_format","wgTitle":"FASTQ format","wgCurRevisionId":1094286335,"wgRevisionId":1094286335,"wgArticleId":22431652,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","All articles with dead external links","Articles with dead external links from July 2015","CS1 maint: multiple names: authors list","Articles with short description","Short description is different from Wikidata","All articles with unsourced statements",
+"Articles with unsourced statements from July 2020","Bioinformatics","Biological sequence format"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"FASTQ_format","wgRelevantArticleId":22431652,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1}}},"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":30000,"wgNoticeProject":"wikipedia","wgVector2022PreviewPages":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":10,"wgULSCurrentAutonym":"English","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgWikibaseItemId":"Q3063023"
+,"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","ext.math.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.cx.eventlogging.campaigns","ext.quicksurveys.init",
+"ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.uls.compactlinks","ext.uls.interface","ext.growthExperiments.SuggestedEditSession"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.40.0-wmf.4"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=1000"/>
+<meta property="og:title" content="FASTQ format - Wikipedia"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/FASTQ_format"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=FASTQ_format&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/FASTQ_format"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-FASTQ_format rootpage-FASTQ_format skin-vector action-view skin-vector-legacy vector-toc-not-collapsed vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-enabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-legacy-toc-disabled vector-feature-visual-enhancement-next-disabled vector-feature-article-tools-disabled"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">FASTQ format</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">File format</div>
+<style data-mw-deduplicate="TemplateStyles:r1066479718">.mw-parser-output .infobox-subbox{padding:0;border:none;margin:-3px;width:auto;min-width:100%;font-size:100%;clear:none;float:none;background-color:transparent}.mw-parser-output .infobox-3cols-child{margin:auto}.mw-parser-output .infobox .navbar{font-size:100%}body.skin-minerva .mw-parser-output .infobox-header,body.skin-minerva .mw-parser-output .infobox-subheader,body.skin-minerva .mw-parser-output .infobox-above,body.skin-minerva .mw-parser-output .infobox-title,body.skin-minerva .mw-parser-output .infobox-image,body.skin-minerva .mw-parser-output .infobox-full-data,body.skin-minerva .mw-parser-output .infobox-below{text-align:center}</style><table class="infobox"><caption class="infobox-title" style="padding-bottom:0.15em;">FASTQ format</caption><tbody><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;"><a href="/wiki/Media_type" title="Media type">Internet media&#160;type</a></th><td class="infobox-data" style="line-height:1.35em;">text/plain, chemical/seq-na-fastq</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Developed&#160;by</th><td class="infobox-data" style="line-height:1.35em;"><a href="/wiki/Wellcome_Trust_Sanger_Institute" class="mw-redirect" title="Wellcome Trust Sanger Institute">Wellcome Trust Sanger Institute</a></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Initial release</th><td class="infobox-data" style="line-height:1.35em;">~2000</td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Type of format</th><td class="infobox-data" style="line-height:1.35em;"><a href="/wiki/Bioinformatics" title="Bioinformatics">Bioinformatics</a></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Extended&#160;from</th><td class="infobox-data" style="line-height:1.35em;"><a href="/wiki/ASCII" title="ASCII">ASCII</a> and <a href="/wiki/FASTA_format" title="FASTA format">FASTA format</a></td></tr><tr><th scope="row" class="infobox-label" style="line-height:1.2em; padding-right:0.65em;">Website</th><td class="infobox-data" style="line-height:1.35em;"><span class="url"><a rel="nofollow" class="external text" href="http://maq.sourceforge.net/fastq.shtml">maq<wbr />.sourceforge<wbr />.net<wbr />/fastq<wbr />.shtml</a></span></td></tr></tbody></table><p><b>FASTQ format</b> is a text-based <a href="/wiki/File_format" title="File format">format</a> for storing both a biological sequence (usually <a href="/wiki/Nucleotide_sequence" class="mw-redirect" title="Nucleotide sequence">nucleotide sequence</a>) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single <a href="/wiki/ASCII" title="ASCII">ASCII</a> character for brevity.
+</p><p>It was originally developed at the <a href="/wiki/Wellcome_Trust_Sanger_Institute" class="mw-redirect" title="Wellcome Trust Sanger Institute">Wellcome Trust Sanger Institute</a> to bundle a <a href="/wiki/FASTA_format" title="FASTA format">FASTA formatted</a> sequence and its quality data, but has recently become the <i><a href="/wiki/De_facto" title="De facto">de facto</a></i> standard for storing the output of high-throughput sequencing instruments such as the <a href="/wiki/Illumina_(company)" class="mw-redirect" title="Illumina (company)">Illumina</a> Genome Analyzer.<sup id="cite_ref-Cock2009_1-0" class="reference"><a href="#cite_note-Cock2009-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Format"><span class="tocnumber">1</span> <span class="toctext">Format</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Illumina_sequence_identifiers"><span class="tocnumber">1.1</span> <span class="toctext">Illumina sequence identifiers</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#NCBI_Sequence_Read_Archive"><span class="tocnumber">1.2</span> <span class="toctext">NCBI Sequence Read Archive</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Variations"><span class="tocnumber">2</span> <span class="toctext">Variations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Quality"><span class="tocnumber">2.1</span> <span class="toctext">Quality</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Encoding"><span class="tocnumber">2.2</span> <span class="toctext">Encoding</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Color_space"><span class="tocnumber">2.3</span> <span class="toctext">Color space</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#FAST5_and_HDF5_evolutions"><span class="tocnumber">2.4</span> <span class="toctext">FAST5 and HDF5 evolutions</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Simulation"><span class="tocnumber">2.5</span> <span class="toctext">Simulation</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Compression"><span class="tocnumber">2.6</span> <span class="toctext">Compression</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#General_compressors"><span class="tocnumber">2.6.1</span> <span class="toctext">General compressors</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Reads"><span class="tocnumber">2.6.2</span> <span class="toctext">Reads</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Quality_values"><span class="tocnumber">2.6.3</span> <span class="toctext">Quality values</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Encryption"><span class="tocnumber">2.7</span> <span class="toctext">Encryption</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#File_extension"><span class="tocnumber">3</span> <span class="toctext">File extension</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Format_converters"><span class="tocnumber">4</span> <span class="toctext">Format converters</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Format">Format</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=1" title="Edit section: Format">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A FASTQ file normally uses four lines per sequence.
+</p>
+<ul><li>Line 1 begins with a '@' character and is followed by a sequence identifier and an <i>optional</i> description (like a <a href="/wiki/FASTA_format" title="FASTA format">FASTA</a> title line).</li>
+<li>Line 2 is the raw sequence letters.</li>
+<li>Line 3 begins with a '+' character and is <i>optionally</i> followed by the same sequence identifier (and any description) again.</li>
+<li>Line 4 encodes the quality values for the sequence in Line 2, and must contain the same number of symbols as letters in the sequence.</li></ul>
+<p>A FASTQ file containing a single sequence might look like this:
+</p>
+<pre>@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65
+</pre>
+<p>The byte representing quality runs from 0x21 (lowest quality; '!' in ASCII) to 0x7e (highest quality; '~' in ASCII).
+Here are the quality value characters in left-to-right increasing order of quality (<a href="/wiki/ASCII" title="ASCII">ASCII</a>):
+</p>
+<pre>&#160;!"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+</pre>
+<p>The original Sanger FASTQ files also allowed the sequence and quality strings to be wrapped (split over multiple lines), but this is generally discouraged<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2020)">citation needed</span></a></i>&#93;</sup> as it can make parsing complicated due to the unfortunate choice of "@" and "+" as markers (these characters can also occur in the quality string).
+</p>
+<h3><span class="mw-headline" id="Illumina_sequence_identifiers">Illumina sequence identifiers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=2" title="Edit section: Illumina sequence identifiers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sequences from the <a href="/wiki/Solexa" class="mw-redirect" title="Solexa">Illumina</a> software use a systematic identifier:
+</p>
+<pre>@HWUSI-EAS100R:6:73:941:1973#0/1
+</pre>
+<table class="wikitable">
+
+<tbody><tr>
+<th>HWUSI-EAS100R
+</th>
+<td>the unique instrument name
+</td></tr>
+<tr>
+<th>6
+</th>
+<td>flowcell lane
+</td></tr>
+<tr>
+<th>73
+</th>
+<td>tile number within the flowcell lane
+</td></tr>
+<tr>
+<th>941
+</th>
+<td>'x'-coordinate of the cluster within the tile
+</td></tr>
+<tr>
+<th>1973
+</th>
+<td>'y'-coordinate of the cluster within the tile
+</td></tr>
+<tr>
+<th>#0
+</th>
+<td>index number for a multiplexed sample (0 for no indexing)
+</td></tr>
+<tr>
+<th>/1
+</th>
+<td>the member of a pair, /1 or /2 <i>(paired-end or mate-pair reads only)</i>
+</td></tr></tbody></table>
+<p>Versions of the Illumina pipeline since 1.4 appear to use <b>#NNNNNN</b> instead of <b>#0</b> for the multiplex ID, where <b>NNNNNN</b> is the sequence of the multiplex tag.
+</p><p>With Casava 1.8 the format of the '@' line has changed:
+</p>
+<pre>@EAS139:136:FC706VJ:2:2104:15343:197393 1:Y:18:ATCACG
+</pre>
+<table class="wikitable">
+
+<tbody><tr>
+<th>EAS139
+</th>
+<td>the unique instrument name
+</td></tr>
+<tr>
+<th>136
+</th>
+<td>the run id
+</td></tr>
+<tr>
+<th>FC706VJ
+</th>
+<td>the flowcell id
+</td></tr>
+<tr>
+<th>2
+</th>
+<td>flowcell lane
+</td></tr>
+<tr>
+<th>2104
+</th>
+<td>tile number within the flowcell lane
+</td></tr>
+<tr>
+<th>15343
+</th>
+<td>'x'-coordinate of the cluster within the tile
+</td></tr>
+<tr>
+<th>197393
+</th>
+<td>'y'-coordinate of the cluster within the tile
+</td></tr>
+<tr>
+<th>1
+</th>
+<td>the member of a pair, 1 or 2 <i>(paired-end or mate-pair reads only)</i>
+</td></tr>
+<tr>
+<th>Y
+</th>
+<td>Y if the read is filtered (did not pass), N otherwise
+</td></tr>
+<tr>
+<th>18
+</th>
+<td>0 when none of the control bits are on, otherwise it is an even number
+</td></tr>
+<tr>
+<th>ATCACG
+</th>
+<td>index sequence
+</td></tr></tbody></table>
+<p>Note that more recent versions of Illumina software output a sample number (defined by the order of the samples in the sample sheet) in place of an index sequence when an index sequence is not explicitly specified for a sample in the sample sheet. For example, the following header might appear in a FASTQ file belonging to the first sample of a batch of samples:
+</p>
+<pre>@EAS139:136:FC706VJ:2:2104:15343:197393 1:N:18:1
+</pre>
+<h3><span class="mw-headline" id="NCBI_Sequence_Read_Archive">NCBI Sequence Read Archive</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=3" title="Edit section: NCBI Sequence Read Archive">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>FASTQ files from the <a href="/wiki/International_Nucleotide_Sequence_Database_Collaboration" title="International Nucleotide Sequence Database Collaboration">INSDC</a> <a href="/wiki/Sequence_Read_Archive" title="Sequence Read Archive">Sequence Read Archive</a> often include a description, e.g.
+</p>
+<pre>@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACC
++SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC
+</pre>
+<p>In this example there is an NCBI-assigned identifier, and the description holds the original identifier from <a href="/wiki/Solexa" class="mw-redirect" title="Solexa">Solexa/Illumina</a> (as described above) plus the read length. Sequencing was performed in paired-end mode (~500bp insert size), see <a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/sra/SRR001666">SRR001666</a>. The default output format of fastq-dump produces entire spots, containing any technical reads and typically single or paired-end biological reads.
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$ </span>fastq-dump.2.9.0 -Z -X <span class="m">2</span> SRR001666
+<span class="go">Read 2 spots for SRR001666</span>
+<span class="go">Written 2 spots for SRR001666</span>
+<span class="go">@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=72</span>
+<span class="go">GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACCAAGTTACCCTTAACAACTTAAGGGTTTTCAAATAGA</span>
+<span class="go">+SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=72</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9ICIIIIIIIIIIIIIIIIIIIIDIIIIIII&gt;IIIIII/</span>
+<span class="go">@SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=72</span>
+<span class="go">GTTCAGGGATACGACGTTTGTATTTTAAGAATCTGAAGCAGAAGTCGATGATAATACGCGTCGTTTTATCAT</span>
+<span class="go">+SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=72</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII6IBIIIIIIIIIIIIIIIIIIIIIIIGII&gt;IIIII-I)8I</span>
+</pre></div>
+<p>Modern usage of FASTQ almost always involves splitting the spot into its biological reads, as described in submitter-provided metadata:
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$ </span>fastq-dump -X <span class="m">2</span> SRR001666 --split-3
+<span class="go">Read 2 spots for SRR001666</span>
+<span class="go">Written 2 spots for SRR001666</span>
+<span class="gp">$ </span>head SRR001666_1.fastq  SRR001666_2.fastq
+<span class="go">==&gt; SRR001666_1.fastq &lt;==</span>
+<span class="go">@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36</span>
+<span class="go">GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACC</span>
+<span class="go">+SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC</span>
+<span class="go">@SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=36</span>
+<span class="go">GTTCAGGGATACGACGTTTGTATTTTAAGAATCTGA</span>
+<span class="go">+SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=36</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII6IBI</span>
+
+<span class="go">==&gt; SRR001666_2.fastq &lt;==</span>
+<span class="go">@SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36</span>
+<span class="go">AAGTTACCCTTAACAACTTAAGGGTTTTCAAATAGA</span>
+<span class="go">+SRR001666.1 071112_SLXA-EAS1_s_7:5:1:817:345 length=36</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIDIIIIIII&gt;IIIIII/</span>
+<span class="go">@SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=36</span>
+<span class="go">AGCAGAAGTCGATGATAATACGCGTCGTTTTATCAT</span>
+<span class="go">+SRR001666.2 071112_SLXA-EAS1_s_7:5:1:801:338 length=36</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIGII&gt;IIIII-I)8I</span>
+</pre></div>
+<p>When present in the archive, fastq-dump can attempt to restore read names to original format. NCBI does not store original read names by default:
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$ </span>fastq-dump -X <span class="m">2</span> SRR001666 --split-3 --origfmt
+<span class="go">Read 2 spots for SRR001666</span>
+<span class="go">Written 2 spots for SRR001666</span>
+<span class="gp">$ </span>head SRR001666_1.fastq  SRR001666_2.fastq
+<span class="go">==&gt; SRR001666_1.fastq &lt;==</span>
+<span class="go">@071112_SLXA-EAS1_s_7:5:1:817:345</span>
+<span class="go">GGGTGATGGCCGCTGCCGATGGCGTCAAATCCCACC</span>
+<span class="go">+071112_SLXA-EAS1_s_7:5:1:817:345</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIII9IG9IC</span>
+<span class="go">@071112_SLXA-EAS1_s_7:5:1:801:338</span>
+<span class="go">GTTCAGGGATACGACGTTTGTATTTTAAGAATCTGA</span>
+<span class="go">+071112_SLXA-EAS1_s_7:5:1:801:338</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII6IBI</span>
+
+<span class="go">==&gt; SRR001666_2.fastq &lt;==</span>
+<span class="go">@071112_SLXA-EAS1_s_7:5:1:817:345</span>
+<span class="go">AAGTTACCCTTAACAACTTAAGGGTTTTCAAATAGA</span>
+<span class="go">+071112_SLXA-EAS1_s_7:5:1:817:345</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIDIIIIIII&gt;IIIIII/</span>
+<span class="go">@071112_SLXA-EAS1_s_7:5:1:801:338</span>
+<span class="go">AGCAGAAGTCGATGATAATACGCGTCGTTTTATCAT</span>
+<span class="go">+071112_SLXA-EAS1_s_7:5:1:801:338</span>
+<span class="go">IIIIIIIIIIIIIIIIIIIIIIGII&gt;IIIII-I)8I</span>
+</pre></div>
+<p>In the example above, the original read names were used rather than the accessioned read name. NCBI accessions runs and the reads they contain. Original read names, assigned by sequencers, are able to function as locally unique identifiers of a read, and convey exactly as much information as a serial number. The ids above were algorithmically assigned based upon run information and geometric coordinates. Early SRA loaders parsed these ids and stored their decomposed components internally. NCBI stopped recording read names because they are frequently modified from the vendors' original format in order to associate some additional information meaningful to a particular processing pipeline, and this caused name format violations that resulted in a high number of rejected submissions. Without a clear schema for read names, their function remains that of a unique read id, conveying the same amount of information as a read serial number. See various <a rel="nofollow" class="external text" href="https://github.com/ncbi/sra-tools/issues?q=is%3Aissue+original+read+names">SRA Toolkit issues</a> for details and discussions.
+</p><p>Also note that <a rel="nofollow" class="external text" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&amp;f=fastq-dump">fastq-dump</a> converts this FASTQ data from the original Solexa/Illumina encoding to the Sanger standard (see encodings below). This is because <a rel="nofollow" class="external text" href="https://github.com/ncbi/sra-tools/issues/130#issuecomment-409995254">the SRA serves as a repository for NGS information, rather than format</a>. The various *-dump tools are capable of producing data in several formats from the same source. The requirements for doing so have been dictated by users over several years, with the majority of early demand coming from the <a href="/wiki/1000_Genomes_Project" title="1000 Genomes Project">1000 Genomes Project</a>.
+</p>
+<h2><span class="mw-headline" id="Variations">Variations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=4" title="Edit section: Variations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Quality">Quality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=5" title="Edit section: Quality">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A quality value <i>Q</i> is an integer mapping of <i>p</i> (i.e., the probability that the corresponding base call is incorrect). Two different equations have been in use.  The first is the standard Sanger variant to assess reliability of a base call, otherwise known as <a href="/wiki/Phred_quality_score" title="Phred quality score">Phred quality score</a>:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q_{\text{sanger}}=-10\,\log _{10}p}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Q</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>sanger</mtext>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>10</mn>
+        <mspace width="thinmathspace" />
+        <msub>
+          <mi>log</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>p</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q_{\text{sanger}}=-10\,\log _{10}p}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d35e9473c8fb52974f7f37c6bd66852e2e276da3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:21.061ex; height:2.843ex;" alt="Q_{\text{sanger}}=-10\,\log _{10}p"/></span>
+</p><p>The Solexa pipeline (i.e., the software delivered with the Illumina Genome Analyzer) earlier used a different mapping, encoding the <a href="/wiki/Odds" title="Odds">odds</a> <i>p</i>/(1-<i>p</i>) instead of the probability <i>p</i>:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q_{\text{solexa-prior to v.1.3}}=-10\,\log _{10}{\frac {p}{1-p}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Q</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>solexa-prior to v.1.3</mtext>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>10</mn>
+        <mspace width="thinmathspace" />
+        <msub>
+          <mi>log</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>10</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>p</mi>
+            <mrow>
+              <mn>1</mn>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>p</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q_{\text{solexa-prior to v.1.3}}=-10\,\log _{10}{\frac {p}{1-p}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca73445cc28b13f2bde5997fe4499011de514bcc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.338ex; width:35.747ex; height:5.343ex;" alt="Q_{\text{solexa-prior to v.1.3}}=-10\,\log _{10}{\frac {p}{1-p}}"/></span>
+</p><p>Although both mappings are asymptotically identical at higher quality values, they differ at lower quality levels (i.e., approximately <i>p</i> &gt; 0.05, or equivalently, <i>Q</i> &lt; 13).
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:602px;"><a href="/wiki/File:Probability_metrics.svg" class="image"><img alt="Relationship between Q and p" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Probability_metrics.svg/600px-Probability_metrics.svg.png" decoding="async" width="600" height="350" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Probability_metrics.svg/900px-Probability_metrics.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Probability_metrics.svg/1200px-Probability_metrics.svg.png 2x" data-file-width="774" data-file-height="451" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Probability_metrics.svg" class="internal" title="Enlarge"></a></div>Relationship between <i>Q</i> and <i>p</i> using the Sanger (red) and Solexa (black) equations (described above). The vertical dotted line indicates <i>p</i> = 0.05, or equivalently, <i>Q</i> ≈ 13.</div></div></div>
+<div style="clear:both;"></div>
+<p>At times there has been disagreement about which mapping Illumina actually uses. The user guide (Appendix B, page 122) for version 1.4 of the Illumina pipeline states that: "The scores are defined as Q=10*log10(p/(1-p)) &#32;&#91;<i><a href="/wiki/Sic" title="Sic">sic</a></i>&#93;, where p is the probability of a base call corresponding to the base in question".<sup id="cite_ref-Illumina_User_Guide_1.4_2-0" class="reference"><a href="#cite_note-Illumina_User_Guide_1.4-2">&#91;2&#93;</a></sup> In retrospect, this entry in the manual appears to have been an error. The user guide (What's New, page 5) for version 1.5 of the Illumina pipeline lists this description instead: "Important Changes in Pipeline v1.3 &#32;&#91;<i><a href="/wiki/Sic" title="Sic">sic</a></i>&#93;. The quality scoring scheme has changed to the Phred [i.e., Sanger] scoring scheme, encoded as an ASCII character by adding 64 to the Phred value. A Phred score of a base is: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q_{\text{phred}}=-10\log _{\text{10}}e}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Q</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>phred</mtext>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>10</mn>
+        <msub>
+          <mi>log</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>10</mtext>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>e</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q_{\text{phred}}=-10\log _{\text{10}}e}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cd7f56fa197fab07f42cd91d3a876ade2aa9b933" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:20.124ex; height:2.843ex;" alt="Q_{\text{phred}}=-10\log _{\text{10}}e"/></span>, where <i>e</i> is the estimated probability of a base being wrong.<sup id="cite_ref-Illumina_User_Guide_1.5_3-0" class="reference"><a href="#cite_note-Illumina_User_Guide_1.5-3">&#91;3&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Encoding">Encoding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=6" title="Edit section: Encoding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Sanger format can encode a <a href="/wiki/Phred_quality_score" title="Phred quality score">Phred quality score</a> from 0 to 93 using ASCII 33 to 126 (although in raw read data the Phred quality score rarely exceeds 60, higher scores are possible in assemblies or read maps). Also used in SAM format.<sup id="cite_ref-Sequence/Alignment_Map_format_4-0" class="reference"><a href="#cite_note-Sequence/Alignment_Map_format-4">&#91;4&#93;</a></sup> Coming to the end of February 2011, Illumina's newest version (1.8) of their pipeline CASAVA  will directly produce fastq in Sanger format, according to the announcement on seqanswers.com forum.<sup id="cite_ref-Upcoming_changes_in_CASAVA_topic_5-0" class="reference"><a href="#cite_note-Upcoming_changes_in_CASAVA_topic-5">&#91;5&#93;</a></sup></li>
+<li>PacBio HiFi reads, which are typically stored in SAM/BAM format, use the Sanger convention: Phred quality scores from 0 to 93 are encoded using ASCII 33 to 126.  Raw PacBio subreads use the same convention but typically assign a placeholder base quality (Q0) to all bases in the read.<sup id="cite_ref-PacBio_BAM_format_specification_6-0" class="reference"><a href="#cite_note-PacBio_BAM_format_specification-6">&#91;6&#93;</a></sup></li>
+<li>Solexa/Illumina 1.0 format can encode a Solexa/Illumina quality score from -5 to 62 using <a href="/wiki/ASCII" title="ASCII">ASCII</a> 59 to 126 (although in raw read data Solexa scores from -5 to 40 only are expected)</li>
+<li>Starting with Illumina 1.3 and before Illumina 1.8, the format encoded a <a href="/wiki/Phred_quality_score" title="Phred quality score">Phred quality score</a> from 0 to 62 using <a href="/wiki/ASCII" title="ASCII">ASCII</a> 64 to 126 (although in raw read data Phred scores from 0 to 40 only are expected).</li>
+<li>Starting in Illumina 1.5 and before Illumina 1.8, the Phred scores 0 to 2 have a slightly different meaning. The values 0 and 1 are no longer used and the value 2, encoded by ASCII 66 "B", is used also at the end of reads as a <i>Read Segment Quality Control Indicator</i>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> The Illumina manual<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> (page 30) states the following: <i>If a read ends with a segment of mostly low quality (Q15 or below), then all of the quality values in the segment are replaced with a value of 2 (encoded as the letter B in Illumina's text-based encoding of quality scores)... This Q2 indicator does not predict a specific error rate, but rather indicates that a specific final portion of the read should not be used in further analyses.</i> Also, the quality score encoded as "B" letter may occur internally within reads at least as late as pipeline version 1.6, as shown in the following example:</li></ul>
+<pre>@HWI-EAS209_0006_FC706VJ:5:58:5894:21141#ATCACG/1
+TTAATTGGTAAATAAATCTCCTAATAGCTTAGATNTTACCTTNNNNNNNNNNTAGTTTCTTGAGATTTGTTGGGGGAGACATTTTTGTGATTGCCTTGAT
++HWI-EAS209_0006_FC706VJ:5:58:5894:21141#ATCACG/1
+efcfffffcfeefffcffffffddf`feed]`]_Ba_^__[YBBBBBBBBBBRTT\]][]dddd`ddd^dddadd^BBBBBBBBBBBBBBBBBBBBBBBB
+</pre>
+<p>An alternative interpretation of this ASCII encoding has been proposed.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> Also, in Illumina runs using PhiX controls, the character 'B' was observed to represent an "unknown quality score". The error rate of 'B' reads was roughly 3 phred scores lower the mean observed score of a given run.
+</p>
+<ul><li>Starting in Illumina 1.8, the quality scores have basically returned to the use of the Sanger format (Phred+33).</li></ul>
+<p>For raw reads, the range of scores will depend on the technology and the base caller used, but will typically be up to 41 for recent Illumina chemistry. Since the maximum observed quality score was previously only 40, various scripts and tools break when they encounter data with quality values larger than 40. For processed reads, scores may be even higher. For example, quality values of 45 are observed in reads from Illumina's Long Read Sequencing Service (previously Moleculo).
+</p>
+<pre>  <span style="color: purple">SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</span>.....................................................
+  ..........................<span style="color: green">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>......................
+  ...............................<span style="color: blue">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</span>......................
+  .................................<span style="color: orange"><b>J</b>JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ</span>.....................
+  <span style="color: brown">LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL</span>....................................................
+  <span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPPPP</span><span style="color: red">PPPP</span>
+ &#160;!"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+  |                         |    |        |                              |                     |
+ 33                        59   64       73                            104                   126
+<span style="color: purple">  0........................26...31.......40                                </span>
+<span style="color: green">                           -5....0........9.............................40 </span>
+<span style="color: blue">                                 0........9.............................40 </span>
+<span style="color: orange">                                    3.....9..............................41 </span>
+<span style="color: brown">  0.2......................26...31........41                              </span>
+<span style="color: red">  0..................20........30........40........50..........................................93</span>
+</pre>
+<pre> <span style="color: purple">S - Sanger        Phred+33,  raw reads typically (0, 40)</span>
+ <span style="color: green">X - Solexa        Solexa+64, raw reads typically (-5, 40)</span>
+ <span style="color: blue">I - Illumina 1.3+ Phred+64,  raw reads typically (0, 40)</span>
+ <span style="color: orange">J - Illumina 1.5+ Phred+64,  raw reads typically (3, 41)
+     with 0=unused, 1=unused, 2=Read Segment Quality Control Indicator (bold) 
+     (Note: See discussion above).</span>
+ <span style="color: brown">L - Illumina 1.8+ Phred+33,  raw reads typically (0, 41)</span>
+ <span style="color: red">P - PacBio        Phred+33,  HiFi reads typically (0, 93)</span>
+</pre>
+<h3><span class="mw-headline" id="Color_space">Color space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=7" title="Edit section: Color space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For SOLiD data, the format is modified to a color space FASTQ sequence (CSFASTQ), where bases in the sequence are combined with the numbers 0, 1, 2, and 3, indicating how bases are modified relative to the previous base in the sequence (0: no change; 1: transition; 2: non-complementary transversion; 3: complementary transversion).<sup id="cite_ref-Cock2009_1-1" class="reference"><a href="#cite_note-Cock2009-1">&#91;1&#93;</a></sup> This format matched the different sequencing chemistry used by SOLiD sequencers. Initial representations only used nucleotide bases at the start of the sequence, but later versions included bases embedded at periodic intervals to improve basecalling and mapping accuracy.
+</p><p>The quality values for CSFASTQ are identical to those of the Sanger format. Alignment tools differ in their preferred version of the quality values: some include a quality score (set to 0, i.e. '!') for the leading nucleotide, others do not. The sequence read archive includes this quality score.
+</p>
+<h3><span class="mw-headline" id="FAST5_and_HDF5_evolutions">FAST5 and HDF5 evolutions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=8" title="Edit section: FAST5 and HDF5 evolutions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The FAST4 format was invented as a derivative of the FASTQ format where each of the 4 bases (A,C,G,T) had separate probabilities stored. It was part of the <a href="https://sourceforge.net/p/swiftng" class="extiw" title="sourceforge:p/swiftng">Swift</a> basecaller, an open source package for primary data analysis on next-gen sequence data "from images to basecalls".
+</p><p>The FAST5 format was invented as an extension of the FAST4 format. The FAST5 files are <a href="/wiki/Hierarchical_Data_Format" title="Hierarchical Data Format">Hierarchical Data Format 5</a> (HDF5) files with a specific schema defined by <a href="/wiki/Oxford_Nanopore_Technologies" title="Oxford Nanopore Technologies">Oxford Nanopore Technologies</a> (ONT).<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Simulation">Simulation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=9" title="Edit section: Simulation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>FASTQ read simulation has been approached by several tools.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+A comparison of those tools can be seen here.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Compression">Compression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=10" title="Edit section: Compression">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="General_compressors">General compressors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=11" title="Edit section: General compressors">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>General-purpose tools such as Gzip and bzip2 regard FASTQ as a plain text file and result in suboptimal compression ratios. NCBI's <a href="/wiki/Sequence_Read_Archive" title="Sequence Read Archive">Sequence Read Archive</a> encodes metadata using the LZ-77 scheme.
+General FASTQ compressors typically compress distinct fields (read names, sequences, comments, and quality scores) in a FASTQ file separately; these include Genozip,<sup id="cite_ref-Genozip_14-0" class="reference"><a href="#cite_note-Genozip-14">&#91;14&#93;</a></sup> DSRC and DSRC2, FQC, LFQC, Fqzcomp, and Slimfastq.
+</p>
+<h4><span class="mw-headline" id="Reads">Reads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=12" title="Edit section: Reads">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Having a reference genome around is convenient because then instead of storing the nucleotide sequences themselves, one can just align the reads to the reference genome and store the positions (pointers) and mismatches; the pointers can then be sorted according to their order in the reference sequence and encoded, e.g., with run-length encoding. When the <a href="/wiki/Coverage_(genetics)" title="Coverage (genetics)">coverage</a> or the repeat content of the sequenced genome is high, this leads to a high compression ratio.
+Unlike the <a href="/wiki/SAM_(file_format)" title="SAM (file format)">SAM</a>/BAM formats, FASTQ files do not specify a reference genome. <b>Alignment-based FASTQ compressors</b> supports the use of either user-provided or <i>de novo</i> assembled reference: LW-FQZip uses a provided reference genome and Quip, Leon, k-Path and KIC perform <i><b>de novo</b></i> assembly using a <a href="/wiki/De_Bruijn_graph" title="De Bruijn graph">de Bruijn graph</a>-based approach. Genozip<sup id="cite_ref-Genozip_14-1" class="reference"><a href="#cite_note-Genozip-14">&#91;14&#93;</a></sup> can optionally use a reference if the user provides one, which may be a single- or multi-species reference file.
+</p><p>Explicit read mapping and <i>de novo</i> assembly are typically slow. <b>Reordering-based FASTQ compressors</b> first cluster reads that share long substrings and then independently compress reads in each cluster after reordering them or assembling them into longer <a href="/wiki/Contig" title="Contig">contigs</a>, achieving perhaps the best trade-off between the running time and compression rate. SCALCE is the first such tool, followed by Orcom and Mince. BEETL uses a generalized <a href="/wiki/Burrows%E2%80%93Wheeler_transform" title="Burrows–Wheeler transform">Burrows–Wheeler transform</a> for reordering reads, and HARC achieves better performance with hash-based reordering. AssemblTrie instead assembles reads into reference trees with as few total number of symbols as possible in the reference.<sup id="cite_ref-pmid29422526_15-0" class="reference"><a href="#cite_note-pmid29422526-15">&#91;15&#93;</a></sup><sup id="cite_ref-Zhu_Numanagić_Sahinalp_2018_pp._779-783_16-0" class="reference"><a href="#cite_note-Zhu_Numanagić_Sahinalp_2018_pp._779-783-16">&#91;16&#93;</a></sup>
+</p><p>Benchmarks for these tools are available in.<sup id="cite_ref-Numanagić_Bonfield_Hach_Voges_pp._1005–1008_17-0" class="reference"><a href="#cite_note-Numanagić_Bonfield_Hach_Voges_pp._1005–1008-17">&#91;17&#93;</a></sup>
+</p>
+<h4><span class="mw-headline" id="Quality_values">Quality values</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=13" title="Edit section: Quality values">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Quality values account for about half of the required disk space in the FASTQ format (before compression), and therefore the compression of the quality values can significantly reduce storage requirements and speed up analysis and transmission of sequencing data. Both lossless and lossy compression are recently being considered in the literature. For example, the algorithm QualComp<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> performs lossy compression with a rate (number of bits per quality value) specified by the user. Based on rate-distortion theory results, it allocates the number of bits so as to minimize the MSE (mean squared error) between the original (uncompressed) and  the reconstructed (after compression) quality values. Other algorithms for compression of quality values include SCALCE<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> and Fastqz.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> Both are lossless compression algorithms that provide an optional controlled lossy transformation approach. For example, SCALCE reduces the alphabet size based on the observation that “neighboring” quality values are similar in general. For a benchmark, see.<sup id="cite_ref-Morteza_21-0" class="reference"><a href="#cite_note-Morteza-21">&#91;21&#93;</a></sup>
+</p><p>As of the HiSeq 2500 Illumina gives the option to output qualities that have been coarse grained into quality bins. The binned scores are computed directly from the empirical quality score table, which is itself tied to the hardware, software and chemistry that were used during the sequencing experiment.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup> 
+</p><p>Genozip<sup id="cite_ref-Genozip_14-2" class="reference"><a href="#cite_note-Genozip-14">&#91;14&#93;</a></sup> uses its DomQual algorithm to compress binned quality scores, such as those generated by Illumina or by Genozip's own <i>--optimize</i> option which generates bins similar to Illumina.
+</p>
+<h3><span class="mw-headline" id="Encryption">Encryption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=14" title="Edit section: Encryption">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Genozip<sup id="cite_ref-Genozip_14-3" class="reference"><a href="#cite_note-Genozip-14">&#91;14&#93;</a></sup> encrypts FASTQ files (as well as other genomic formats), by applying the standard AES encryption at its most secure level of 256 bits (<i>--password</i> option). 
+</p><p>Cryfa<sup id="cite_ref-CRYFA_23-0" class="reference"><a href="#cite_note-CRYFA-23">&#91;23&#93;</a></sup> uses AES encryption and enables to compact data besides encryption. It can also address FASTA files.
+</p>
+<h2><span class="mw-headline" id="File_extension">File extension</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=15" title="Edit section: File extension">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There is no standard <a href="/wiki/File_extension" class="mw-redirect" title="File extension">file extension</a> for a FASTQ file, but .fq and .fastq are commonly used.
+</p>
+<h2><span class="mw-headline" id="Format_converters">Format converters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=16" title="Edit section: Format converters">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Biopython" title="Biopython">Biopython</a> version 1.51 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a href="/wiki/EMBOSS" title="EMBOSS">EMBOSS</a> version 6.1.0 patch 1 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a href="/wiki/BioPerl" title="BioPerl">BioPerl</a> version 1.6.1 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a href="/wiki/BioRuby" title="BioRuby">BioRuby</a> version 1.4.0 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li>
+<li><a href="/wiki/BioJava" title="BioJava">BioJava</a> version 1.7.1 onwards (interconverts Sanger, Solexa and Illumina 1.3+)</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>The <a href="/wiki/FASTA_format" title="FASTA format">FASTA</a> format, used to represent genome sequences.</li>
+<li>The <a href="/wiki/SAM_(file_format)" title="SAM (file format)">SAM</a> format, used to represent genome sequencer reads that have been aligned to genome sequences.</li>
+<li>The <a href="/w/index.php?title=GVF_format&amp;action=edit&amp;redlink=1" class="new" title="GVF format (page does not exist)">GVF</a> format (Genome Variation Format), an extension based on the <a href="/wiki/GFF3" class="mw-redirect" title="GFF3">GFF3</a> format.</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=18" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist reflist-columns references-column-width" style="column-width: 35em;">
+<ol class="references">
+<li id="cite_note-Cock2009-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Cock2009_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Cock2009_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFCockFieldsGotoHeuer2009" class="citation journal cs1">Cock, P. J. A.; Fields, C. J.; Goto, N.; Heuer, M. L.; Rice, P. M. (2009). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217">"The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants"</a>. <i>Nucleic Acids Research</i>. <b>38</b> (6): 1767–1771. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fnar%2Fgkp1137">10.1093/nar/gkp1137</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2847217">2847217</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/20015970">20015970</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nucleic+Acids+Research&amp;rft.atitle=The+Sanger+FASTQ+file+format+for+sequences+with+quality+scores%2C+and+the+Solexa%2FIllumina+FASTQ+variants&amp;rft.volume=38&amp;rft.issue=6&amp;rft.pages=1767-1771&amp;rft.date=2009&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2847217%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F20015970&amp;rft_id=info%3Adoi%2F10.1093%2Fnar%2Fgkp1137&amp;rft.aulast=Cock&amp;rft.aufirst=P.+J.+A.&amp;rft.au=Fields%2C+C.+J.&amp;rft.au=Goto%2C+N.&amp;rft.au=Heuer%2C+M.+L.&amp;rft.au=Rice%2C+P.+M.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2847217&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Illumina_User_Guide_1.4-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-Illumina_User_Guide_1.4_2-0">^</a></b></span> <span class="reference-text">Sequencing Analysis Software User Guide: For Pipeline Version 1.4 and CASAVA Version 1.0, dated April 2009 <a rel="nofollow" class="external text" href="http://genomecenter.ucdavis.edu/dna_technologies/documents/pipeline_1_4.pdf">PDF</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20100610232559/http://genomecenter.ucdavis.edu/dna_technologies/documents/pipeline_1_4.pdf">Archived</a> June 10, 2010, at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></span>
+</li>
+<li id="cite_note-Illumina_User_Guide_1.5-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Illumina_User_Guide_1.5_3-0">^</a></b></span> <span class="reference-text">Sequencing Analysis Software User Guide: For Pipeline Version 1.5 and CASAVA Version 1.0, dated August 2009 <a rel="nofollow" class="external text" href="http://illumina.ucr.edu/illumina_docs/Pipeline1.5/Pipeline1.5_CASAVA1.0_User_Guide_15006500_A.pdf">PDF</a><sup class="noprint Inline-Template"><span style="white-space: nowrap;">&#91;<i><a href="/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;Dead link tagged July 2015">dead link</span></a></i>&#93;</span></sup></span>
+</li>
+<li id="cite_note-Sequence/Alignment_Map_format-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Sequence/Alignment_Map_format_4-0">^</a></b></span> <span class="reference-text">Sequence/Alignment Map format Version 1.0, dated August 2009 <a rel="nofollow" class="external text" href="http://samtools.sourceforge.net/SAM1.pdf">PDF</a></span>
+</li>
+<li id="cite_note-Upcoming_changes_in_CASAVA_topic-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Upcoming_changes_in_CASAVA_topic_5-0">^</a></b></span> <span class="reference-text">Seqanswer's topic of skruglyak, dated January 2011 <a rel="nofollow" class="external text" href="http://seqanswers.com/forums/showthread.php?s=ba8c7dfba863815f637c0bf45882f14b&amp;t=8895">website</a></span>
+</li>
+<li id="cite_note-PacBio_BAM_format_specification-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-PacBio_BAM_format_specification_6-0">^</a></b></span> <span class="reference-text">PacBio BAM format specification 10.0.0 <a rel="nofollow" class="external text" href="https://pacbiofileformats.readthedocs.io/en/10.0/BAM.html#qual">https://pacbiofileformats.readthedocs.io/en/10.0/BAM.html#qual</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Illumina Quality Scores, Tobias Mann, Bioinformatics, San Diego, Illumina <a rel="nofollow" class="external free" href="http://seqanswers.com/forums/showthread.php?t=4721">http://seqanswers.com/forums/showthread.php?t=4721</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Using Genome Analyzer
+Sequencing Control Software, Version 2.6, Catalog # SY-960-2601, Part # 15009921 Rev. A, November 2009 <a rel="nofollow" class="external free" href="http://watson.nci.nih.gov/solexa/Using_SCSv2.6_15009921_A.pdf">http://watson.nci.nih.gov/solexa/Using_SCSv2.6_15009921_A.pdf</a><sup class="noprint Inline-Template"><span style="white-space: nowrap;">&#91;<i><a href="/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;Dead link tagged July 2015">dead link</span></a></i>&#93;</span></sup></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110724075950/http://solexaqa.sourceforge.net/questions.htm">SolexaQA project website</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://labs.epi2me.io/notebooks/Introduction_to_Fast5_files.html">"Introduction_to_Fast5_files"</a>. <i>labs.epi2me.io</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2022-05-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=labs.epi2me.io&amp;rft.atitle=Introduction_to_Fast5_files&amp;rft_id=https%3A%2F%2Flabs.epi2me.io%2Fnotebooks%2FIntroduction_to_Fast5_files.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHuangLiMyersMarth2012" class="citation journal cs1">Huang, W; Li, L; Myers, J. R.; Marth, G. T. (2012). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3278762">"ART: A next-generation sequencing read simulator"</a>. <i>Bioinformatics</i>. <b>28</b> (4): 593–4. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fbioinformatics%2Fbtr708">10.1093/bioinformatics/btr708</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3278762">3278762</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/22199392">22199392</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Bioinformatics&amp;rft.atitle=ART%3A+A+next-generation+sequencing+read+simulator&amp;rft.volume=28&amp;rft.issue=4&amp;rft.pages=593-4&amp;rft.date=2012&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3278762%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F22199392&amp;rft_id=info%3Adoi%2F10.1093%2Fbioinformatics%2Fbtr708&amp;rft.aulast=Huang&amp;rft.aufirst=W&amp;rft.au=Li%2C+L&amp;rft.au=Myers%2C+J.+R.&amp;rft.au=Marth%2C+G.+T.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3278762&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFPratasPinhoRodrigues2014" class="citation journal cs1">Pratas, D; Pinho, A. J.; Rodrigues, J. M. (2014). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3927261">"XS: A FASTQ read simulator"</a>. <i>BMC Research Notes</i>. <b>7</b>: 40. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1186%2F1756-0500-7-40">10.1186/1756-0500-7-40</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3927261">3927261</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/24433564">24433564</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BMC+Research+Notes&amp;rft.atitle=XS%3A+A+FASTQ+read+simulator&amp;rft.volume=7&amp;rft.pages=40&amp;rft.date=2014&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3927261%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F24433564&amp;rft_id=info%3Adoi%2F10.1186%2F1756-0500-7-40&amp;rft.aulast=Pratas&amp;rft.aufirst=D&amp;rft.au=Pinho%2C+A.+J.&amp;rft.au=Rodrigues%2C+J.+M.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3927261&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFEscalonaRochaPosada2016" class="citation journal cs1">Escalona, Merly; Rocha, Sara; Posada, David (2016). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5224698">"A comparison of tools for the simulation of genomic next-generation sequencing data"</a>. <i>Nature Reviews Genetics</i>. <b>17</b> (8): 459–69. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fnrg.2016.57">10.1038/nrg.2016.57</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5224698">5224698</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/27320129">27320129</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nature+Reviews+Genetics&amp;rft.atitle=A+comparison+of+tools+for+the+simulation+of+genomic+next-generation+sequencing+data&amp;rft.volume=17&amp;rft.issue=8&amp;rft.pages=459-69&amp;rft.date=2016&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5224698%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F27320129&amp;rft_id=info%3Adoi%2F10.1038%2Fnrg.2016.57&amp;rft.aulast=Escalona&amp;rft.aufirst=Merly&amp;rft.au=Rocha%2C+Sara&amp;rft.au=Posada%2C+David&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5224698&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Genozip-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-Genozip_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Genozip_14-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Genozip_14-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Genozip_14-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://doi.org/10.1093/bioinformatics/btab102"><i>Lan, D., et al. 2021, Genozip: a universal extensible genomic data compressor, Bioinformatics</i></a></span>
+</li>
+<li id="cite_note-pmid29422526-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-pmid29422526_15-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGinart_AA,_Hui_J,_Zhu_K,_Numanagić_I,_Courtade_TA,_Sahinalp_SC2018" class="citation journal cs1">Ginart AA, Hui J, Zhu K, Numanagić I, Courtade TA, Sahinalp SC;  et&#160;al. (2018). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5805770">"Optimal compressed representation of high throughput sequence data via light assembly"</a>. <i>Nat Commun</i>. <b>9</b> (1): 566. <a href="/wiki/Bibcode_(identifier)" class="mw-redirect" title="Bibcode (identifier)">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2018NatCo...9..566G">2018NatCo...9..566G</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fs41467-017-02480-6">10.1038/s41467-017-02480-6</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5805770">5805770</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/29422526">29422526</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nat+Commun&amp;rft.atitle=Optimal+compressed+representation+of+high+throughput+sequence+data+via+light+assembly.&amp;rft.volume=9&amp;rft.issue=1&amp;rft.pages=566&amp;rft.date=2018&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5805770%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F29422526&amp;rft_id=info%3Adoi%2F10.1038%2Fs41467-017-02480-6&amp;rft_id=info%3Abibcode%2F2018NatCo...9..566G&amp;rft.au=Ginart+AA%2C+Hui+J%2C+Zhu+K%2C+Numanagi%C4%87+I%2C+Courtade+TA%2C+Sahinalp+SC&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5805770&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span><span class="cs1-maint citation-comment"><code class="cs1-code">{{<a href="/wiki/Template:Cite_journal" title="Template:Cite journal">cite journal</a>}}</code>:  CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span></span>
+</li>
+<li id="cite_note-Zhu_Numanagić_Sahinalp_2018_pp._779-783-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-Zhu_Numanagić_Sahinalp_2018_pp._779-783_16-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFZhuNumanagićSahinalp2018" class="citation book cs1">Zhu, Kaiyuan; Numanagić, Ibrahim; Sahinalp, S. Cenk (2018). "Genomic Data Compression". <i>Encyclopedia of Big Data Technologies</i>. Cham: Springer International Publishing. pp.&#160;779–783. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-3-319-63962-8_55-1">10.1007/978-3-319-63962-8_55-1</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-319-63962-8" title="Special:BookSources/978-3-319-63962-8"><bdi>978-3-319-63962-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Genomic+Data+Compression&amp;rft.btitle=Encyclopedia+of+Big+Data+Technologies&amp;rft.place=Cham&amp;rft.pages=779-783&amp;rft.pub=Springer+International+Publishing&amp;rft.date=2018&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-319-63962-8_55-1&amp;rft.isbn=978-3-319-63962-8&amp;rft.aulast=Zhu&amp;rft.aufirst=Kaiyuan&amp;rft.au=Numanagi%C4%87%2C+Ibrahim&amp;rft.au=Sahinalp%2C+S.+Cenk&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Numanagić_Bonfield_Hach_Voges_pp._1005–1008-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-Numanagić_Bonfield_Hach_Voges_pp._1005–1008_17-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFNumanagićBonfieldHachVoges2016" class="citation journal cs1">Numanagić, Ibrahim; Bonfield, James K; Hach, Faraz; Voges, Jan; Ostermann, Jörn; Alberti, Claudio; Mattavelli, Marco; Sahinalp, S Cenk (2016-10-24). "Comparison of high-throughput sequencing data compression tools". <i>Nature Methods</i>. Springer Science and Business Media LLC. <b>13</b> (12): 1005–1008. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fnmeth.4037">10.1038/nmeth.4037</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1548-7091">1548-7091</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/27776113">27776113</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:205425373">205425373</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nature+Methods&amp;rft.atitle=Comparison+of+high-throughput+sequencing+data+compression+tools&amp;rft.volume=13&amp;rft.issue=12&amp;rft.pages=1005-1008&amp;rft.date=2016-10-24&amp;rft.issn=1548-7091&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A205425373%23id-name%3DS2CID&amp;rft_id=info%3Apmid%2F27776113&amp;rft_id=info%3Adoi%2F10.1038%2Fnmeth.4037&amp;rft.aulast=Numanagi%C4%87&amp;rft.aufirst=Ibrahim&amp;rft.au=Bonfield%2C+James+K&amp;rft.au=Hach%2C+Faraz&amp;rft.au=Voges%2C+Jan&amp;rft.au=Ostermann%2C+J%C3%B6rn&amp;rft.au=Alberti%2C+Claudio&amp;rft.au=Mattavelli%2C+Marco&amp;rft.au=Sahinalp%2C+S+Cenk&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFOchoaAsnaniBharadiaChowdhury2013" class="citation journal cs1">Ochoa, Idoia; Asnani, Himanshu; Bharadia, Dinesh; Chowdhury, Mainak; Weissman, Tsachy; Yona, Golan (2013). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3698011">"Qual <i>Comp</i>: A new lossy compressor for quality scores based on rate distortion theory"</a>. <i>BMC Bioinformatics</i>. <b>14</b>: 187. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1186%2F1471-2105-14-187">10.1186/1471-2105-14-187</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3698011">3698011</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/23758828">23758828</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BMC+Bioinformatics&amp;rft.atitle=Qual+Comp%3A+A+new+lossy+compressor+for+quality+scores+based+on+rate+distortion+theory&amp;rft.volume=14&amp;rft.pages=187&amp;rft.date=2013&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3698011%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F23758828&amp;rft_id=info%3Adoi%2F10.1186%2F1471-2105-14-187&amp;rft.aulast=Ochoa&amp;rft.aufirst=Idoia&amp;rft.au=Asnani%2C+Himanshu&amp;rft.au=Bharadia%2C+Dinesh&amp;rft.au=Chowdhury%2C+Mainak&amp;rft.au=Weissman%2C+Tsachy&amp;rft.au=Yona%2C+Golan&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3698011&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHachNumanagicAlkanSahinalp2012" class="citation journal cs1">Hach, F; Numanagic, I; Alkan, C; Sahinalp, S. C. (2012). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3509486">"SCALCE: Boosting sequence compression algorithms using locally consistent encoding"</a>. <i>Bioinformatics</i>. <b>28</b> (23): 3051–7. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fbioinformatics%2Fbts593">10.1093/bioinformatics/bts593</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3509486">3509486</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/23047557">23047557</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Bioinformatics&amp;rft.atitle=SCALCE%3A+Boosting+sequence+compression+algorithms+using+locally+consistent+encoding&amp;rft.volume=28&amp;rft.issue=23&amp;rft.pages=3051-7&amp;rft.date=2012&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3509486%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F23047557&amp;rft_id=info%3Adoi%2F10.1093%2Fbioinformatics%2Fbts593&amp;rft.aulast=Hach&amp;rft.aufirst=F&amp;rft.au=Numanagic%2C+I&amp;rft.au=Alkan%2C+C&amp;rft.au=Sahinalp%2C+S.+C.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3509486&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text">fastqz.<a rel="nofollow" class="external free" href="http://mattmahoney.net/dc/fastqz/">http://mattmahoney.net/dc/fastqz/</a></span>
+</li>
+<li id="cite_note-Morteza-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-Morteza_21-0">^</a></b></span> <span class="reference-text">M. Hosseini, D. Pratas, and A. Pinho. 2016. A survey on data compression methods for biological sequences. <i>Information</i> <b>7</b>(4):(2016): 56</span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text">Illumina Tech Note.<a rel="nofollow" class="external free" href="http://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_understanding_quality_scores.pdf">http://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_understanding_quality_scores.pdf</a></span>
+</li>
+<li id="cite_note-CRYFA-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-CRYFA_23-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHosseiniPratasPinho2018" class="citation book cs1">Hosseini M, Pratas D, Pinho A (2018). <i>Cryfa: a secure encryption tool for genomic data</i>. <i>Bioinformatics</i>. Vol.&#160;35. pp.&#160;146–148. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fbioinformatics%2Fbty645">10.1093/bioinformatics/bty645</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC6298042">6298042</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/30020420">30020420</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Cryfa%3A+a+secure+encryption+tool+for+genomic+data.&amp;rft.pages=146-148&amp;rft.date=2018&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC6298042%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F30020420&amp;rft_id=info%3Adoi%2F10.1093%2Fbioinformatics%2Fbty645&amp;rft.aulast=Hosseini&amp;rft.aufirst=M&amp;rft.au=Pratas%2C+D&amp;rft.au=Pinho%2C+A&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFASTQ+format" class="Z3988"></span></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FASTQ_format&amp;action=edit&amp;section=19" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://maq.sourceforge.net/fastq.shtml">MAQ</a> webpage discussing FASTQ variants</li></ul>
+<div class="navbox-styles nomobile"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Bioinformatics" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Bioinformatics" title="Template:Bioinformatics"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Bioinformatics" title="Template talk:Bioinformatics"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Bioinformatics&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Bioinformatics" style="font-size:114%;margin:0 4em"><a href="/wiki/Bioinformatics" title="Bioinformatics">Bioinformatics</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Databases</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li>Sequence databases: <a href="/wiki/GenBank" title="GenBank">GenBank</a>, <a href="/wiki/European_Nucleotide_Archive" title="European Nucleotide Archive">European Nucleotide Archive</a> and <a href="/wiki/DNA_Data_Bank_of_Japan" title="DNA Data Bank of Japan">DNA Data Bank of Japan</a></li>
+<li>Secondary databases: <a href="/wiki/UniProt" title="UniProt">UniProt</a>, database of protein sequences grouping together <a href="/wiki/UniProt#UniProtKB.2FSwiss-Prot" title="UniProt">Swiss-Prot</a>, <a href="/wiki/UniProt#UniProtKB.2FTrEMBL" title="UniProt">TrEMBL</a> and <a href="/wiki/Protein_Information_Resource" title="Protein Information Resource">Protein Information Resource</a></li>
+<li>Other databases: <a href="/wiki/Protein_Data_Bank" title="Protein Data Bank">Protein Data Bank</a>, <a href="/wiki/Ensembl_genome_database_project" title="Ensembl genome database project">Ensembl</a> and <a href="/wiki/InterPro" title="InterPro">InterPro</a></li>
+<li>Specialised genomic databases: <a href="/wiki/Barcode_of_Life_Data_System" title="Barcode of Life Data System">BOLD</a>, <a href="/wiki/Saccharomyces_Genome_Database" title="Saccharomyces Genome Database">Saccharomyces Genome Database</a>, <a href="/wiki/FlyBase" title="FlyBase">FlyBase</a>, <a href="/wiki/VectorBase" title="VectorBase">VectorBase</a>, <a href="/wiki/WormBase" title="WormBase">WormBase</a>, <a href="/wiki/Rat_Genome_Database" title="Rat Genome Database">Rat Genome Database</a>, <a href="/wiki/PHI-base" title="PHI-base">PHI-base</a>, <a href="/wiki/The_Arabidopsis_Information_Resource" title="The Arabidopsis Information Resource">Arabidopsis Information Resource</a> and <a href="/wiki/Zebrafish_Information_Network" title="Zebrafish Information Network">Zebrafish Information Network</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/BLAST" class="mw-redirect" title="BLAST">BLAST</a></li>
+<li><a href="/wiki/Bowtie_(sequence_analysis)" title="Bowtie (sequence analysis)">Bowtie</a></li>
+<li><a href="/wiki/Clustal" title="Clustal">Clustal</a></li>
+<li><a href="/wiki/EMBOSS" title="EMBOSS">EMBOSS</a></li>
+<li><a href="/wiki/HMMER" title="HMMER">HMMER</a></li>
+<li><a href="/wiki/MUSCLE_(alignment_software)" title="MUSCLE (alignment software)">MUSCLE</a></li>
+<li><a href="/wiki/SAMtools" title="SAMtools">SAMtools</a></li>
+<li><a href="/wiki/Short_Oligonucleotide_Analysis_Package" title="Short Oligonucleotide Analysis Package">SOAP suite</a></li>
+<li><a href="/wiki/TopHat_(bioinformatics)" title="TopHat (bioinformatics)">TopHat</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li>Server: <a href="/wiki/ExPASy" class="mw-redirect" title="ExPASy">ExPASy</a></li>
+<li>Ontology: <a href="/wiki/Gene_ontology" class="mw-redirect" title="Gene ontology">Gene Ontology</a></li>
+<li><a href="/wiki/Rosalind_(education_platform)" title="Rosalind (education platform)">Rosalind (education platform)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Institutions</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Broad_Institute" title="Broad Institute">Broad Institute</a></li>
+<li><a href="/wiki/China_National_GeneBank" title="China National GeneBank">China National GeneBank</a> (CNGB)</li>
+<li><a href="/wiki/Computational_Biology_Department" class="mw-redirect" title="Computational Biology Department">Computational Biology Department</a> (CBD)</li>
+<li><a href="/wiki/COSBI" title="COSBI">Microsoft Research - University of Trento Centre for Computational and Systems Biology</a> (COSBI)</li>
+<li><a href="/wiki/Database_Center_for_Life_Science" title="Database Center for Life Science">Database Center for Life Science</a> (DBCLS)</li>
+<li><a href="/wiki/DNA_Data_Bank_of_Japan" title="DNA Data Bank of Japan">DNA Data Bank of Japan</a> (DDBJ)</li>
+<li><a href="/wiki/European_Bioinformatics_Institute" title="European Bioinformatics Institute">European Bioinformatics Institute</a> (EMBL-EBI)</li>
+<li><a href="/wiki/European_Molecular_Biology_Laboratory" title="European Molecular Biology Laboratory">European Molecular Biology Laboratory</a> (EMBL)</li>
+<li><a href="/wiki/Flatiron_Institute" title="Flatiron Institute">Flatiron Institute</a></li>
+<li><a href="/wiki/J._Craig_Venter_Institute" title="J. Craig Venter Institute">J. Craig Venter Institute</a> (JCVI)</li>
+<li><a href="/wiki/Max_Planck_Institute_of_Molecular_Cell_Biology_and_Genetics" title="Max Planck Institute of Molecular Cell Biology and Genetics">Max Planck Institute of Molecular Cell Biology and Genetics</a> (MPI-CBG)</li>
+<li><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">US National Center for Biotechnology Information</a> (NCBI)</li>
+<li><a href="/wiki/National_Institute_of_Genetics" title="National Institute of Genetics">Japanese Institute of Genetics</a></li>
+<li><a href="/wiki/Netherlands_Bioinformatics_Centre" title="Netherlands Bioinformatics Centre">Netherlands Bioinformatics Centre</a> (NBIC)</li>
+<li><a href="/wiki/Philippine_Genome_Center" title="Philippine Genome Center">Philippine Genome Center</a> (PGC)</li>
+<li><a href="/wiki/Scripps_Research" title="Scripps Research">Scripps Research</a></li>
+<li><a href="/wiki/Swiss_Institute_of_Bioinformatics" title="Swiss Institute of Bioinformatics">Swiss Institute of Bioinformatics</a> (SIB)</li>
+<li><a href="/wiki/Wellcome_Sanger_Institute" title="Wellcome Sanger Institute">Wellcome Sanger Institute</a></li>
+<li><a href="/wiki/Whitehead_Institute" title="Whitehead Institute">Whitehead Institute</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organizations</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/African_Society_for_Bioinformatics_and_Computational_Biology" title="African Society for Bioinformatics and Computational Biology">African Society for Bioinformatics and Computational Biology</a> (ASBCB)</li>
+<li><a href="/wiki/Australia_Bioinformatics_Resource" title="Australia Bioinformatics Resource">Australia Bioinformatics Resource</a> (EMBL-AR)</li>
+<li><a href="/wiki/EMBnet" title="EMBnet">European Molecular Biology network</a> (EMBnet)</li>
+<li><a href="/wiki/International_Nucleotide_Sequence_Database_Collaboration" title="International Nucleotide Sequence Database Collaboration">International Nucleotide Sequence Database Collaboration</a> (INSDC)</li>
+<li><a href="/wiki/International_Society_for_Biocuration" title="International Society for Biocuration">International Society for Biocuration</a> (ISB)</li>
+<li><a href="/wiki/International_Society_for_Computational_Biology" title="International Society for Computational Biology">International Society for Computational Biology</a> (ISCB)
+<ul><li><a href="/wiki/International_Society_for_Computational_Biology_Student_Council" title="International Society for Computational Biology Student Council">Student Council</a> (ISCB-SC)</li></ul></li>
+<li><a href="/wiki/Institute_of_Genomics_and_Integrative_Biology" title="Institute of Genomics and Integrative Biology">Institute of Genomics and Integrative Biology</a> (CSIR-IGIB)</li>
+<li><a href="/wiki/Japanese_Society_for_Bioinformatics" title="Japanese Society for Bioinformatics">Japanese Society for Bioinformatics</a> (JSBi)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Meetings</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Basel_Computational_Biology_Conference" title="Basel Computational Biology Conference">Basel Computational Biology Conference‎</a> ([BC<sup>2</sup>])</li>
+<li><a href="/wiki/European_Conference_on_Computational_Biology" title="European Conference on Computational Biology">European Conference on Computational Biology</a> (ECCB)</li>
+<li><a href="/wiki/Intelligent_Systems_for_Molecular_Biology" title="Intelligent Systems for Molecular Biology">Intelligent Systems for Molecular Biology</a> (ISMB)</li>
+<li><a href="/wiki/International_Conference_on_Bioinformatics" title="International Conference on Bioinformatics">International Conference on Bioinformatics</a> (InCoB)</li>
+<li><a href="/wiki/International_Conference_on_Computational_Intelligence_Methods_for_Bioinformatics_and_Biostatistics" title="International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics">International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics</a> (CIBB)</li>
+<li><a href="/wiki/ISCB_Africa_ASBCB_Conference_on_Bioinformatics" title="ISCB Africa ASBCB Conference on Bioinformatics">ISCB Africa ASBCB Conference on Bioinformatics</a></li>
+<li><a href="/wiki/Pacific_Symposium_on_Biocomputing" title="Pacific Symposium on Biocomputing">Pacific Symposium on Biocomputing</a> (PSB)</li>
+<li><a href="/wiki/Research_in_Computational_Molecular_Biology" title="Research in Computational Molecular Biology">Research in Computational Molecular Biology</a> (RECOMB)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">File formats</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/CRAM_(file_format)" title="CRAM (file format)">CRAM format</a></li>
+<li><a href="/wiki/FASTA_format" title="FASTA format">FASTA format</a></li>
+<li><a class="mw-selflink selflink">FASTQ format</a></li>
+<li><a href="/wiki/NeXML_format" title="NeXML format">NeXML format</a></li>
+<li><a href="/wiki/Nexus_file" title="Nexus file">Nexus format</a></li>
+<li><a href="/wiki/Pileup_format" title="Pileup format">Pileup format</a></li>
+<li><a href="/wiki/SAM_(file_format)" title="SAM (file format)">SAM format</a></li>
+<li><a href="/wiki/Stockholm_format" title="Stockholm format">Stockholm format</a></li>
+<li><a href="/wiki/Variant_Call_Format" title="Variant Call Format">VCF format</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related topics</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Computational_biology" title="Computational biology">Computational biology</a></li>
+<li><a href="/wiki/List_of_biobanks" title="List of biobanks">List of biobanks</a></li>
+<li><a href="/wiki/List_of_biological_databases" title="List of biological databases">List of biological databases</a></li>
+<li><a href="/wiki/Molecular_phylogenetics" title="Molecular phylogenetics">Molecular phylogenetics</a></li>
+<li><a href="/wiki/Sequencing" title="Sequencing">Sequencing</a></li>
+<li><a href="/wiki/Sequence_database" title="Sequence database">Sequence database</a></li>
+<li><a href="/wiki/Sequence_alignment" title="Sequence alignment">Sequence alignment</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/16px-Symbol_category_class.svg.png" decoding="async" title="Category" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/23px-Symbol_category_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/31px-Symbol_category_class.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="/wiki/Category:Bioinformatics" title="Category:Bioinformatics">Category</a></b></li>
+<li><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Category:Bioinformatics" class="extiw" title="commons:Category:Bioinformatics">Commons</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1353
+Cached time: 20221011014517
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.353 seconds
+Real time usage: 0.691 seconds
+Preprocessor visited node count: 2065/1000000
+Post‐expand include size: 61321/2097152 bytes
+Template argument size: 2435/2097152 bytes
+Highest expansion depth: 17/100
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 56164/5000000 bytes
+Lua time usage: 0.189/10.000 seconds
+Lua memory usage: 6979514/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  565.658      1 -total
+ 29.92%  169.236      1 Template:Reflist
+ 19.56%  110.632      8 Template:Cite_journal
+ 10.05%   56.865      1 Template:Short_description
+  9.47%   53.566      1 Template:Bioinformatics
+  9.11%   51.508      1 Template:Navbox
+  8.43%   47.683      1 Template:Infobox_file_format
+  7.73%   43.752      1 Template:Infobox
+  5.91%   33.424      3 Template:Fix
+  5.81%   32.867      1 Template:Citation_needed
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:22431652-0!canonical and timestamp 20221011014516 and revision id 1094286335.
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=FASTQ_format&amp;oldid=1094286335">https://en.wikipedia.org/w/index.php?title=FASTQ_format&amp;oldid=1094286335</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Bioinformatics" title="Category:Bioinformatics">Bioinformatics</a></li><li><a href="/wiki/Category:Biological_sequence_format" title="Category:Biological sequence format">Biological sequence format</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="/wiki/Category:Articles_with_dead_external_links_from_July_2015" title="Category:Articles with dead external links from July 2015">Articles with dead external links from July 2015</a></li><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2020" title="Category:Articles with unsourced statements from July 2020">Articles with unsourced statements from July 2020</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+
+<nav id="p-personal" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" aria-labelledby="p-personal-label" role="navigation"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span title="The user page for the IP address you are editing as">Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=FASTQ+format" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=FASTQ+format" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+
+<nav id="p-namespaces" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/FASTQ_format" title="View the content page [c]" accesskey="c"><span>Article</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/Talk:FASTQ_format" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t"><span>Talk</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	/>
+	<label
+		id="p-variants-label"
+		 aria-label="Change language variant"
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+
+<nav id="p-views" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-views-label" role="navigation"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="/wiki/FASTQ_format"><span>Read</span></a></li><li id="ca-edit" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=FASTQ_format&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="/w/index.php?title=FASTQ_format&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+
+<nav id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	/>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+			<h3 >
+				<label for="searchInput">Search</label>
+			</h3>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="sentences" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search Wikipedia for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/Main_Page"
+			title="Visit the main page"></a>
+	</div>
+	
+
+<nav id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation"><span>Donate</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+
+<nav id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation"  >
+	<h3
+		id="p-interaction-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-tb" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/FASTQ_format" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/FASTQ_format" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=FASTQ_format&amp;oldid=1094286335" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=FASTQ_format&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=FASTQ_format&amp;id=1094286335&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3063023" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li></ul>
+		
+	</div>
+</nav>
+
+
+<nav id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation"  >
+	<h3
+		id="p-coll-print_export-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=FASTQ_format&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=FASTQ_format&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+
+<nav id="p-lang" class="vector-menu mw-portlet mw-portlet-lang vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation"  >
+	<h3
+		id="p-lang-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ca mw-list-item"><a href="https://ca.wikipedia.org/wiki/Format_FASTQ" title="Format FASTQ – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target"><span>Català</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D9%82%D8%A7%D9%84%D8%A8_%D9%81%D8%B3%D8%AA%DA%A9" title="قالب فستک – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/FASTQ" title="FASTQ – French" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-id mw-list-item"><a href="https://id.wikipedia.org/wiki/Format_FASTQ" title="Format FASTQ – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target"><span>Bahasa Indonesia</span></a></li><li class="interlanguage-link interwiki-he mw-list-item"><a href="https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A8%D7%9E%D7%98_FASTQ" title="פורמט FASTQ – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target"><span>עברית</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/Fastq" title="Fastq – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://ru.wikipedia.org/wiki/FASTQ" title="FASTQ – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/FASTQ%E6%A0%BC%E5%BC%8F" title="FASTQ格式 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3063023#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 June 2022, at 18:35<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License 3.0</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=FASTQ_format&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.353","walltime":"0.691","ppvisitednodes":{"value":2065,"limit":1000000},"postexpandincludesize":{"value":61321,"limit":2097152},"templateargumentsize":{"value":2435,"limit":2097152},"expansiondepth":{"value":17,"limit":100},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":56164,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  565.658      1 -total"," 29.92%  169.236      1 Template:Reflist"," 19.56%  110.632      8 Template:Cite_journal"," 10.05%   56.865      1 Template:Short_description","  9.47%   53.566      1 Template:Bioinformatics","  9.11%   51.508      1 Template:Navbox","  8.43%   47.683      1 Template:Infobox_file_format","  7.73%   43.752      1 Template:Infobox","  5.91%   33.424      3 Template:Fix","  5.81%   32.867      1 Template:Citation_needed"]},"scribunto":{"limitreport-timeusage":{"value":"0.189","limit":"10.000"},"limitreport-memusage":{"value":6979514,"limit":52428800}},"cachereport":{"origin":"mw1353","timestamp":"20221011014517","ttl":1814400,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"FASTQ format","url":"https:\/\/en.wikipedia.org\/wiki\/FASTQ_format","sameAs":"http:\/\/www.wikidata.org\/entity\/Q3063023","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q3063023","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2009-04-16T03:44:13Z","dateModified":"2022-06-21T18:35:48Z","headline":"nucleic acid sequence and base qualities file format"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"FASTQ format","url":"https:\/\/en.wikipedia.org\/wiki\/FASTQ_format","sameAs":"http:\/\/www.wikidata.org\/entity\/Q3063023","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q3063023","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2009-04-16T03:44:13Z","dateModified":"2022-06-21T18:35:48Z","headline":"nucleic acid sequence and base qualities file format"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":108,"wgHostname":"mw1432"});});</script>
+</body>
+</html>
