@@ -1,4 +1,5 @@
 #! usr/bin/env python3
+import sys
 
 class dnaseq(object):  
     def __init__(self, name, dnaseq, organism):
@@ -39,9 +40,9 @@ class dnaseq(object):
         )
 if __name__ == '__main__':
     record = dnaseq()
-    record.name = 'KRL.srf.3310'
-    record.dnaseq = 'AGACAAACCGGTGCCAACGTGCGCGGACGCCGCCGCCGCCACCGCCGCCACCGC'
-    record.organism = 'Bacillus subtilis'
+    record.name = sys.argv[0]
+    record.dnaseq = sys.argv[1]
+    record.organism = sys.argv[2]
 
 print('ID: {}\nORG: {}\nLEN: {}\nGC%: {}\nSEQ: {}\n{}'.format(        
 	record.name,
