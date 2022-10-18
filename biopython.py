@@ -1,4 +1,4 @@
-#! usr/bin/env python3
+! usr/bin/env python3
 #biopython problem set
 import Bio
 import re
